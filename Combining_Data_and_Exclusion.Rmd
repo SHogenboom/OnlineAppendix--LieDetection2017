@@ -1,0 +1,328 @@
+---
+title: "THE AMOUNT OF DETAILS IN TRUTHS AND LIES ABOUT PAST AND FUTURE WEEKEND ACTIVITIES"
+author: "Sally A.M. Hogenboom - 11377909"
+date: "16-12-2017"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# set WD
+```
+
+
+# Available Data
+
++ File 1 - LieDetection_Data.csv
+    + Contains demographics, veracity judgement, exclusion criteria, transcriptions,
+  confidence of deceit, frequency of lie.
++ File 2 - LieDetection_NER_processed.csv
+    + Transcriptions in long format -> allows for Named Entity Recognition 
+  (NER;https://spacy.io)
+    + Unique and Non-Unique Frequency counts of the NERs...
+          + Person
+          + Location
+          + Time
+          + Facility
+          + GPE
+          + Product
+          + Date
+          + Money
+
+```{R Reading in off data, echo = FALSE}
+# Read in file 1 - demographics
+  file1 <- read.csv(file = "LieDetection_Data.csv", header = TRUE, sep = ";")
+
+# Read in file 2 - processed statements
+  file2 <- read.csv(file = "LieDetection_NER_processed.csv", header = TRUE, sep = ";")
+  file2 <- file2[,-1] # remove empty first column
+
+# Combine files - NO EXCLUSIONS
+  # include only data from non-unique entities
+  # if wish to include unique entitie counts -> include columns [13:21]
+  Data_All <- cbind(file1, file2[1:77, 4:12], file2[78:154, 4:12])
+  
+# Rename columns from file 2 to have unique values
+  # Saturday 
+    colnames(Data_All)[21:29] <- c("Sat_Veracity", "Sat_Person_NU", 
+                           "Sat_Location_NU", "Sat_Time_NU", 
+                           "Sat_Facility_NU", "Sat_GPE_NU", 
+                           "Sat_Product_NU", "Sat_Date_NU", "Sat_Money_NU")
+  
+  # Sunday 
+    colnames(Data_All)[30:38] <- c("Sun_Veracity", "Sun_Person_NU", 
+                           "Sun_Location_NU", "Sun_Time_NU", 
+                           "Sun_Facility_NU", "Sun_GPE_NU", 
+                           "Sun_Product_NU", "Sun_Date_NU", "Sun_Money_NU")
+  # Others
+    colnames(Data_All)[11] <- "OrderOfLie"
+    colnames(Data_All)[2] <- "Time"
+
+  # Calculate total amount of NER in statements
+  # Sum the frequency counts of the specific NERs into a total value of Non-Unique 
+    # ... entities.
+      Data_All$Total_Sat <- rowSums(Data_All[,c("Sat_Person_NU", "Sat_Location_NU", 
+                                      "Sat_Time_NU", "Sat_Facility_NU", "Sat_GPE_NU", 
+                                      "Sat_Product_NU", "Sat_Date_NU", "Sat_Money_NU")])
+    
+      Data_All$Total_Sun <- rowSums(Data_All[, c("Sun_Person_NU", "Sun_Location_NU", 
+                                       "Sun_Time_NU", "Sun_Facility_NU", 
+                                       "Sun_GPE_NU", "Sun_Product_NU", "Sun_Date_NU", 
+                                       "Sun_Money_NU")])
+      
+# Calculate Total NERs Divided for Truths and Lies
+  # create new columns to store output
+    Data_All$Total_Truth <- NaN
+    Data_All$Total_Lie <- NaN
+      
+  for (i in 1:nrow(Data_All)){
+    if(Data_All[i, "OrderOfLie"] == 1) {
+          # Truth-First
+          # Saturday == Truth
+          # Sunday == Lie
+            Data_All[i, "Total_Truth"] <- Data_All[i, "Total_Sat"]
+            Data_All[i, "Total_Lie"] <- Data_All[i, "Total_Sun"]
+    } else {
+          # Lie-First
+          # Saturday == Lie
+          # Sunday == Truth
+            Data_All[i, "Total_Truth"] <- Data_All[i, "Total_Sun"]
+            Data_All[i, "Total_Lie"] <- Data_All[i, "Total_Sat"]
+      } # END IF
+    } # END LOOP
+
+```
+
+# Meaning of Column Headers
+  1. `Participant.Nr.`    > unique participant number, corresponds with filenames of voice
+                          tracks.
+  2. `Condition.Nr.`      > Did participants talk about future or past weekend activities?
+  3. `Location`           > Where the participant Data_All was collected
+  4. `Date.Time`          > When the Data_All was collected
+  5. `Age`                > Age of the participants during Data_Allcollection
+  6. `Gender`             > Self-identified gender
+  7. `Student..Y.N`       > Are the participants students?
+  8. `English.Proficiency`  > On a level from 1 (not at all) to 5 (excellent) how do you 
+                            rate your own level of English proficiency?
+  9. `Ground.Truth.1`       > 1 Sentence Description of Past/Future Saturday activities
+  10. `Ground.Truth.2`      > 1 Sentence Description of Past/Future Sunday activities
+  11. `OrderOfLie`          > Did participants start by lying or telling the truth? 
+                            Included as covariate, to detect any effect of modelling after 
+                            the first description
+  12. `Veracity.Accuracy`   > Was the 3rd researcher succesful in destinguishing the truth
+  from the lie?
+  13. `Veracity.Coding`     > Numerical values of 12
+  14. `Judgement.By`        > Who provided the veracity judgement?
+  15. `Frequency.of.Lie`    > Self-rated; on a level from 1 (never) to 10 (all the time), 
+  how often do the activity that you lied about (e.g., how often do you go to the gym?).
+  16. `Confidence.of.Deception` > On a scale from 1(not at all) to 10 (definitely) how sure
+  are you that you have deceived the judge? In other words, higher scores indicate that the 
+  participants believe their statements to be highly similar
+  17. `Saturday`            > Transcriptions of the statement provided about the saturday
+  18. `Sunday`              > Transcriptions of the statement provided about the sunday
+  19. `NOTES`               > Any notable events that occurred during Data_All collection or 
+  basis for the veracity judgements.
+  20. `Transcriptions`      > Any notes regarding the transcriptions
+  21. Named Entities (Sat_  = Saturday & Sun_ = Sunday)
+      a. `_Veracity`        > Whether the description is a truth or a lie
+      b. `_Person_NU`       > Non-unique person entities (people)
+      c. `_Location_NU`     > Non-unique location entities (where)
+      d. `_Time_NU`         > Non-unique time entities (smaller than a day)
+      e. `_GPE_NU`          > Geographic locations
+      f. `_Product_NU`      > Non-unique product entities (e.g., Nintendo)
+      g. `_Date_NU`         > Non-unique date entities (e.g., monday)
+      h. `_Money_NU`        > Non-unique money entities (e.g., 500 dollars)
+  22. `Total_`              > Total number of named entities in truthful or deceptive statements
+  23. `Predictive_Accuracy` > Veracity judgement made based on criteria that lies contain more details than truthful statements
+      
+
+
+# Predictive Accuracy
+
+Confirmatory analysis indicated that lies, on average, contain more Named Entities than truthful statements. If we adopt this criteria as part of exploratory predictive modelling we find the following frequencies.
+
+```{r Predictive Accuracy Before Exclusion, echo = FALSE}
+# Create new column to store output
+  Data_All$Predictive_Accuracy <- NaN
+
+# Loop over all participants
+  for (i in 1:nrow(Data_All)) {
+    if (Data_All[i, "Total_Truth"] > Data_All[i, "Total_Lie"]){
+      # truth longer than lie so decision rule not accurate
+      Data_All[i, "Predictive_Accuracy"] <- "Mistaken"
+    } else if (Data_All[i, "Total_Truth"] < Data_All[i, "Total_Lie"]) {
+      # lie longer than truth so decision rule accurate
+      Data_All[i, "Predictive_Accuracy"] <- "Correct"
+    } else {
+      # Lie and Truth of equal length so no decision can be made
+      Data_All[i, "Predictive_Accuracy"] <- "Inconclusive"
+    } # END IF 
+  } # END LOOP
+
+# Compute Frequencies
+  accuracy <- table(Data_All$Predictive_Accuracy, Data_All$Time)
+  accuracy <- cbind(accuracy, rowSums(accuracy))
+  accuracy <- rbind(accuracy, colSums(accuracy))
+  colnames(accuracy) <- c("Future", "Past", "Total")
+  rownames(accuracy) <- c("Correct", "Inconclusive", "Mistaken", "Total")
+
+print(accuracy)
+```
+
+The percentage accuracy attained from conclusive judgements (N = 50) is: 
+
+```{R Percentage Accurate, echo = FALSE}
+amount_deciscions <- (accuracy["Correct", "Total"] + 
+                                   accuracy["Mistaken", "Total"])
+
+accuracy_percentage <- round((accuracy["Correct", "Total"] / 
+                                  amount_deciscions)*100,2) 
+
+paste(accuracy_percentage, "%")
+```
+
+# Exclusion Criteria
+
+Participants were excluded based on:
+
++ Inadherence to the instructions (N = 2)
+    + PP. 5
+    + PP. 21
++ Change of protocol (N = 15)
+    + PP. 63 - PP. 77
+
+```{R Exclusion Data}
+Data_Excluded <- Data_All[-(c(5,21,63:77)),]
+```
+
+# Predictive Accuracy After Exclusion
+
+```{R, echo = FALSE}
+# Clean accuracy column 
+Data_Excluded$Predictive_Accuracy <- NaN
+
+# Loop over all participants
+for (i in 1:nrow(Data_Excluded)) {
+  if (Data_Excluded[i, "Total_Truth"] > Data_Excluded[i, "Total_Lie"]){
+    # truth longer than lie so decision rule not accurate
+    Data_Excluded[i, "Predictive_Accuracy"] <- "Mistaken"
+  } else if (Data_Excluded[i, "Total_Truth"] < Data_Excluded[i, "Total_Lie"]) {
+    # lie longer than truth so decision rule accurate
+    Data_Excluded[i, "Predictive_Accuracy"] <- "Correct"
+  } else {
+    Data_Excluded[i, "Predictive_Accuracy"] <- "Inconclusive"
+  } # END IF
+} # END LOOP
+
+# Compute Frequencies
+  accuracy_excluded <- table(Data_Excluded$Predictive_Accuracy, Data_Excluded$Time)
+  accuracy_excluded <- cbind(accuracy_excluded, rowSums(accuracy_excluded))
+  accuracy_excluded <- rbind(accuracy_excluded, colSums(accuracy_excluded))
+  colnames(accuracy_excluded) <- c("Future", "Past", "Total")
+  rownames(accuracy_excluded) <- c("Correct", "Inconclusive", "Mistaken", "Total")
+
+print(accuracy_excluded)
+
+```
+```{R Percentage Accurate After Exclusion, echo = FALSE}
+amount_deciscions <- (accuracy_excluded["Correct", "Total"] + 
+                                   accuracy_excluded["Mistaken", "Total"])
+
+accuracy_excluded_percentage <- round((accuracy_excluded["Correct", "Total"] / 
+                                  amount_deciscions)*100,0) 
+
+paste(accuracy_excluded_percentage, "%")
+```
+
+# Visualization of Data
+```{R echo=FALSE, message=FALSE, warning=FALSE}
+# load package for creation of violin plots
+library("yarrr")      
+```
+
+## Truthful Statements
+
+```{R ViolingPlot Truths, echo = FALSE}
+par(mfrow = c(1,2))
+
+pirateplot(Data_All$Total_Truth ~ Data_All$Time, Data_All, pal = c("grey", "black"),
+             xlab = "Time", ylab = "Amount of Named Entities Recognized",
+             main = "Pre-Exclusion",
+             family = "Times New Roman", gl.lwd = 0, inf.method = "se")
+
+pirateplot(Data_Excluded$Total_Truth ~ Data_Excluded$Time, Data_Excluded, pal = c("grey", "black"),
+             xlab = "Time", ylab = "Amount of Named Entities Recognized",
+             main = "Post-Exclusion",
+             family = "Times New Roman", gl.lwd = 0, inf.method = "se")
+
+```
+
+The amount of recognized named entities for truthful statements about past and future weekend activities. On the left the data is presented **before** exclusion, and on the right **after** exclusion of data. The black line represents the group mean, the box the standard error of the mean, and the spread of the data is outlined (Kampstra, 2008)
+
+## Deceptive Statements
+
+```{R ViolinPlot Lies, echo = FALSE}
+par(mfrow = c(1,2))
+
+pirateplot(Data_All$Total_Lie ~ Data_All$Time, Data_All, pal = c("grey", "black"),
+             xlab = "Time", ylab = "Amount of Named Entities Recognized", 
+              main = "Pre-Exclusion",
+              family = "Times New Roman", gl.lwd = 0, inf.method = "se")
+
+pirateplot(Data_Excluded$Total_Lie ~ Data_Excluded$Time, Data_Excluded, pal = c("grey", "black"),
+             xlab = "Time", ylab = "Amount of Named Entities Recognized",
+             main = "Post-Exclusion",
+             family = "Times New Roman", gl.lwd = 0, inf.method = "se")
+
+
+```
+The amount of recognized named entities for deceptive statements about past and future weekend activities. On the left the data is presented **before** exclusion, and on the right **after** exclusion of data. The black line represents the group mean, the box the standard error of the mean, and the spread of the data is outlined (Kampstra, 2008)
+
+```{R echo = FALSE}
+# SAVE VIOLIN PLOTS
+
+# png("violinplots_deceptive.png")
+#   par(mfrow = c(1,2))
+# 
+#   pirateplot(Data_All$Total_Lie ~ Data_All$Time, Data_All, pal = c("grey", "black"),
+#              xlab = "Time", ylab = "Amount of Named Entities Recognized", 
+#               main = "Deceptive descriptions of future and past weekend activities",
+#               family = "Times New Roman", gl.lwd = 0, inf.method = "se")
+# 
+#   pirateplot(Data_Excluded$Total_Lie ~ Data_Excluded$Time, Data_Excluded, pal = c("grey", "black"),
+#              xlab = "Time", ylab = "Amount of Named Entities Recognized",
+#              main = "Truthful descriptions of future and past weekend activities",
+#              family = "Times New Roman", gl.lwd = 0, inf.method = "se")
+# 
+# dev.off()
+# 
+# png("violingplots_truthful.png")
+#   par(mfrow = c(1,2))
+# 
+#   pirateplot(Data_All$Total_Truth ~ Data_All$Time, Data_All, pal = c("grey", "black"),
+#              xlab = "Time", ylab = "Amount of Named Entities Recognized",
+#              main = "Truthful Descriptions - Pre-Exclusion",
+#              family = "Times New Roman", gl.lwd = 0, inf.method = "se")
+# 
+#   pirateplot(Data_Excluded$Total_Truth ~ Data_Excluded$Time, Data_Excluded, pal = c("grey", "black"),
+#              xlab = "Time", ylab = "Amount of Named Entities Recognized",
+#              main = "Truthful Descriptions - Post-Exclusion",
+#              family = "Times New Roman", gl.lwd = 0, inf.method = "se")
+# dev.off()
+```
+
+# Processed Data
+
+The datafiles including newly created columns (e.g., total amount of NEs in truthful descriptions) are available as:
+
++ All collected data - LieDetection_CombinedData_All.csv
++ Data after excluding of participants - LieDetection_Combined_Excluded.csv
+
+```{R Save Data, echo = FALSE}
+write.csv(Data_All, "LieDetection_CombinedData_All.csv")
+write.csv(Data_Excluded, "LieDetection_Combined_Excluded.csv")
+```
+
+

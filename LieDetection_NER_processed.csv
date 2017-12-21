@@ -1,0 +1,155 @@
+;Text;Participant;Filename;Veracity;Person_NU;Location_NU;Time_NU;Facility_NU;GPE_NU;Product_NU;Date_NU;Money_NU;Total_NU;Person_U;Location_U;Time_U;Facility_U;GPE_U;Product_U;Date_U;Money_U
+1;So on Saturday I woke up really late and I slept for the whole day. And I ordered some food from 'Thuisbezorgd'. And then I went to bed again. ;1;1_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+2;On Saturday I went to the library and I studied for pretty much the whole day took some little breaks, and spent the whole day there.;2;2_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+3;On Saturday I did not do anything on Friday so I woke up quite early and I went to yoga in the morning. And then I did not do much in the afternoon. And that is it, that is what I did on Saturday;3;3_sat;Lie;0;0;2;0;0;0;3;0;5;0;0;2;0;0;0;2;0
+4;On Saturday I was at home, I was with my mother and just wanted a relax one for a change. ;4;4_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+5;On Saturday I had a football match, and we won two to one, and after that I ate with my friends in the cafetaria, and after that I went out with my friends in the city of where I live. ;5;5_sat;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+6;First, I went shopping, in Amsterdam and later on the day I went to the cinema.;6;6_sat;Lie;0;0;0;0;1;0;1;0;2;0;0;0;0;1;0;1;0
+7;On Saturday I went to my parents. I went with my brother and sister as well, we went out for dinner and we had to pack our stuff because our parents were moving;7;7_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+8;On saturday I tried to get to the city the first time to get some christmas presents, it is quite busy in Frankfurt and a lot of people are there so I tried to be early this year. Because in the last week before christmas it is quite late so I had a nice saturday in the city, some shopping, some christmas shopping, and the chrismas market as well.;8;8_sat;Lie;0;0;0;0;1;0;4;0;5;0;0;0;0;1;0;3;0
+9;On Saturyday I worked all day because it is busy christmas season now so yeah I needed to put a lot of new effort into our marketing campaigns.;9;9_sat;Truth;0;0;0;0;0;0;2;0;2;0;0;0;0;0;0;2;0
+10;Saturday I went go sporting because I row a lot, not rowing because it was too cold but I went for a run.;10;10_sat;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+11;Saturday I went to meet my sister, and I went for a running, and then I did some studying.;11;11_sat;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+12;I went shopping with my friends, yes. ;12;12_sat;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+13;On Saturday I was studying, and after that I went dinner with my roommates, and we played a game in the evening;13;13_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+14;On Saturday I went to the swimming pool with some friends, the tikibad in Wassenaar. And in the evening we had some dinner.;14;14_sat;Lie;0;0;0;0;1;0;1;0;2;0;0;0;0;1;0;1;0
+15;Last saturday I went drinking, I went to a concert of a really shitty artist. It was fun but it was like really bad quality, but it was a good day.;15;15_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+16;I celebrate Sinterklaas at my parent's place in Twente and pretty much only that, for the rest just chilling. ;16;16_sat;Truth;0;0;0;0;2;0;0;0;2;0;0;0;0;2;0;0;0
+17;My friend works at a juicery so I went and spend the day with her and had free food.;17;17_sat;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+18;On Saturday I was sick so I went to my boyfriend's house to chill.;18;18_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+19;So I went to a date with a guy I met through 'Safa'.;19;19_sat;Lie;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0
+20;I worked, I work in a fashion store and I worked the whole day.;20;20_sat;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+21;So Saturday I was in Singel, I was studying for my bachelor thesis, and I was there the whole day;21;21_sat;Truth;1;0;0;0;0;0;1;0;2;1;0;0;0;0;0;1;0
+22;On Saturday I went out to a club in the evening;22;22_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+23;I went out.;23;23_sat;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+24;On Saturday I went to the birthday of the grandma of my girlfriend. In a city next to Amsterdam. In a fancy hotel. And in the evening I did nothing because I was really tired from the night before;24;24_sat;Truth;0;0;1;0;1;0;1;0;3;0;0;1;0;1;0;1;0
+25;On Saturday, I worked around the house. Did some windows, I had a, how do you say that? They came over to work on the house, on the outside. It got really dusty so I had to brush most of that off. And while I was brushing that off I also accidently removed quite a lot of paint, so I had to brush that back on. It was super nasty stuff, and I got it on my hands and, I still have like itch, itches from that.;25;25_sat;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+26;I was just at home with my flatmate. We were chilling a bit, watching TV, listening to some music.;26;26_sat;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+27;On Saturday I was holidaying in Athens and I ate a lot, and I drank a lot. And I got to know a very cool bar, and the boys treat us a lot of alcohol. I was pretty drunk, yeah.  ;27;27_sat;Truth;0;0;0;0;1;0;1;0;2;0;0;0;0;1;0;1;0
+28;I can tell you. I went to the Efteling and to this, how  is it called, theme park. And it was organized by my housing RA's. And yes we actually went there but it was pretty cold. Yeah but it was a good afternoon, a good day. ;28;28_sat;Lie;0;0;1;0;1;0;0;0;2;0;0;1;0;1;0;0;0
+29;Last Saturday I was in Den Bosh buying presents for my family, Christmas presents. And I bought like something for my sisters. And then I came to Amsterdam in the afternoon;29;29_sat;Lie;1;0;1;0;1;0;2;0;5;1;0;1;0;1;0;2;0
+30;Saturday I was studying for the FCIS exam Monday. I did like, I was prepared before but I still had some stuff I really needed to catch up on. So yeah.;30;30_sat;Truth;0;0;0;0;0;0;2;0;2;0;0;0;0;0;0;2;0
+31;I studied at the library which is in the center, and had dinner with my friends, and after that we take a walk around the center because it is like a light festival. So we just have a look of it.;31;31_sat;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+32;Yeah sure. Saturday during the day I did not do that much because I was pretty hangover from the night before. And then I went to work at 18:00 and I had to work until 04:00 and it was kind of a quiet night. But I had a lot of fun with my co-workers.;32;32_sat;Lie;0;0;3;0;0;0;1;0;4;0;0;2;0;0;0;1;0
+33;Last Saturday I had to work from 12:00 to 18:00, it was quite busy during the day, a lot of people. It was actually my first time, I have a new job. So I started, like I had to figure out how it works, it was pretty stressing. And after I went to a party with a couple of friends in Noord as well, and at last we went to the disco Dolly's that is in the center. And we got pretty drunk, it was nice. That was my Saturday;33;33_sat;Lie;1;0;1;0;1;0;3;0;6;1;0;1;0;1;0;3;0
+34;Yeah, on the Saturday I went to Christmas market in Munster, in Germany, with some friends. And in the evening we go out to eat, we went out to eat, and had a few gluhwein, and yeah that is it. ;34;34_sat;Truth;0;0;0;0;2;0;2;0;4;0;0;0;0;2;0;2;0
+35;Yes last Saturday I stayed at home, worked on my assignments, and during the break I went out for a run, some sports. ;35;35_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+36;I had a fantastic Saturday. So I was uhm back home on friday in London and I went to meet my friend Hannah Hickingbottom and we went to the Tate Modern museum and I flew back in the evening. ;36;36_sat;Lie;1;0;1;0;1;0;2;0;5;1;0;1;0;1;0;2;0
+37;Hi I, I spent it all day studying, or trying to at least. That is literally it. Yeah exciting times.;37;37_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+38;Yeah we went out because it was my friend her birthday. We went out for drinks and then we went out to a club. ;38;38_sat;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+39;I am going to have to clean my apartment, because we are going to have to leave the apartment very soon and it needs to be super clean because otherwise we might not get our deposit back.;39;39_sat;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+40;Yes I will hopefully be going clubbing with some of my friends because I am going back home to Dubai where I live normally, before I moved here, so I'll be going clubbing with them.;40;40_sat;Truth;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0
+41;Um, I think on Saturday I'm gonna spend the night with my friends. We are going to have dinner, something really chill, because then;41;41_sat;Lie;0;0;1;0;0;0;1;0;2;0;0;1;0;0;0;1;0
+42;Yea, uh, Saturday I am going to dinner with my friends, with her and some other girlfriends, and we are going to a party later. ;42;42_sat;Lie;0;0;0;0;1;0;1;0;2;0;0;0;0;1;0;1;0
+43;Next Saturday I'm going to the movie Continuum with a friend;43;43_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+44;Next Saturday I have to work all day, and that's actually it.;44;44_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+45;Uh yea, I am planning to go to my parents, I haven't visited them in a while. So yea, basically that.;45;45_sat;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+46;Yea so my family is coming to Amsterdam, so we will just do some sight seeing. This is the first time they come here, so maybe go to the Rijksmuseum and walk a bit. Just see Amsterdam. ;46;46_sat;Lie;2;0;0;0;1;0;0;0;3;1;0;0;0;1;0;0;0
+47;On Saturday I will, I am not entirely sure but I will probably go see a film and then maybe there's a market in the Jordaan on Saturdays that I go to sometimes to do my grocery shopping;47;47_sat;Truth;0;0;0;0;0;0;2;0;2;0;0;0;0;0;0;2;0
+48;I need to study, actually. ;48;48_sat;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+49;Next Saturday my cousin who lives in Aachen is going to visit me we had this plan for forever and we are finally going to walk around Amsterdam and just, you know, going to a bar or stuff;49;49_sat;Lie;1;0;0;0;1;0;1;0;3;1;0;0;0;1;0;1;0
+50;So next Saturday I think I'll be here again, to study, cus the week after is the session of exam, so we will be here working. ;50;50_sat;Truth;0;0;0;0;0;0;2;0;2;0;0;0;0;0;0;2;0
+51;On Saturday I am going out with friends, I think going out here in Amsterdam, with four other friends;51;51_sat;Truth;0;0;0;0;1;0;1;0;2;0;0;0;0;1;0;1;0
+52;On Saturday I plan to study, because I have a paper due on Monday. That is an assignment for our pre-master where I basicly just have to do a bunch of statistics stuff so that they can see that were are equipped to do the research master.;52;52_sat;Truth;0;0;0;0;0;0;2;0;2;0;0;0;0;0;0;2;0
+53;It's my friend's birthday so we are going to celebrate her birthday at a party. She's turning 24, so we are going to go all out!;53;53_sat;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+54;On Saturday, I hope to go study... I should study... so I'm going to try to get some work done, maybe at home but maybe here but I think it's only open till 6:00pm, so maybe... I'm not sure yet. ;54;54_sat;Lie;0;0;1;0;0;0;1;0;2;0;0;1;0;0;0;1;0
+55;I have a birthday party of a former, um yea, roommate of mine. She's turning 23, and we are having cheese fondue at some restaurant. After she wants to go to the Disco Dolly, so I think that's what the plan is.;55;55_sat;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+56;Um I'm not quite sure, I'll probably go out working. I'll have finished with my exams by then, so uh... that's it.;56;56_sat;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+57;Um I'm going to study. I have exams coming up next week, no not next week, the week after that. I do human geography, and we are just rounding up the course. So exams coming up, yay!;57;57_sat;Truth;0;0;0;0;0;0;3;0;3;0;0;0;0;0;0;2;0
+58;Yea, I have a soccer game. A soccer match.;58;58_sat;Lie;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0
+59;Next Saturday I'm going to work at my work.. It's a cafe here in De Pijp. Mostly I work there on Saturdays, so next Saturday I will work there too, from like 5 o-clock, till like 4 o-clock after midnight. Yea that's quite it.;59;59_sat;Truth;2;0;1;0;0;0;3;0;6;2;0;1;0;0;0;3;0
+60;Next Saturday I'm going to Ajax, they are playing home against Tesse, like 9 o-clock. That's quite everything I plan until today;60;60_sat;Lie;0;0;0;0;2;0;2;0;4;0;0;0;0;2;0;2;0
+61;Next Saturday, probably going to go in New York and just have fun. Party all night long, we enjoy it.;61;61_sat;Lie;0;0;1;0;1;0;1;0;3;0;0;1;0;1;0;1;0
+62;I am just going to stay home and relax, not many big plans, I'm just going to chill.;62;62_sat;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+63;Next Saturday I'm going to do some homework and take my dog to the park.;63;63_sat;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+64;Next Saturday I'm going to be flying from Singapore to London.;64;64_sat;Truth;0;0;0;0;2;0;1;0;3;0;0;0;0;2;0;1;0
+65;I'm having a brunch plan with my colleague. ;65;65_sat;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+66;Yea, so I'm gonna meet up with some friends at bar Festine Lente, my favorite bar and we're gonna have a few drinks. Probably gonna get pretty drunk and then bike back home.;66;66_sat;Lie;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0
+67;Flying to Italy. With my girlfriend.;67;67_sat;Lie;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0
+68;Next Saturday I'm gonna go to a concert um it's a concert, like a choir concert and my sister is singing in that choir. My parents are also coming over so after that we'll all go out to dinner.;68;68_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+69;I think I will go to the casino and spend all the money I made by bribing my neighbor, drink a lot of champagne to celebrate, and have a fun time.;69;69_sat;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+70;I am going to go to Capetown.;70;70_sat;Truth;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0
+71;On Saturday I will meet with a good friend of mine who haven't seen for about 20 years. His name is Paul Bekers. He lives in the Ukraine. He will be over in Utrecht, where we will sit together and have some beers and talk about business.;71;71_sat;Lie;1;0;0;0;2;0;2;0;5;1;0;0;0;2;0;2;0
+72;Next Saturday I will be working on my homework and after that I will meet with some friends.;72;72_sat;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+73;Saturday I will go with my boyfriend to snowworld.;73;73_sat;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+74;Ok on Saturday I am probably going to clean the truck. Well that will probably take all saturday I think.;74;74_sat;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+75;Next Saturday I am going shopping in Amsterdam, and I hope to buy some new shoes, a new coat for the winter, and a nice dress for the Christmas party.;75;75_sat;Lie;0;0;0;0;1;0;2;0;3;0;0;0;0;1;0;2;0
+76;I am going to work.;76;76_sat;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+77;So this Saturday I want to get organized at home, and get my packing straight to go to France. And if I am really organized leading up to Saturday, I may invite some people over for Christmas drinks or house warming drinks.;77;77_sat;Truth;0;0;0;0;1;0;3;0;4;0;0;0;0;1;0;3;0
+78;And on Sunday I hung out with friends and drank some coffee with them and I studied a bit and then I watched some tv at night and then I went to bed again.;1;1_sun;Lie;0;0;1;0;0;0;1;0;2;0;0;1;0;0;0;1;0
+79;On Sunday I went out during the day with some of my friends and we went just walking around and then I spent most of the day just hanging out.;2;2_sun;Lie;0;0;0;0;0;0;3;0;3;0;0;0;0;0;0;2;0
+80;On Sunday I had a big study session so I woke up early again, did not go to yoga but I did go to the library. And I studied all day.;3;3_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+81;Sunday I went to the football match. I'm a big Ajax fan so I decided to check that out. ;4;4_sun;Lie;0;0;0;0;1;0;1;0;2;0;0;0;0;1;0;1;0
+82;Sunday I was of course a little bit of headace of the day before. And I watched tv the whole day yeah with my parents. and after that I had gourmetten with my parents;5;5_sun;Truth;0;0;0;0;0;0;2;0;2;0;0;0;0;0;0;2;0
+83;On Sunday I actually studied the whole day and in the evening I ate with my friends.;6;6_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+84;Sunday I went back to Amsterdam and I went to the library to study and yeah had dinner with a friend in the evening;7;7_sun;Lie;0;0;1;0;1;0;1;0;3;0;0;1;0;1;0;1;0
+85; On sunday we had a lot of snow so  I did not really do anything, just relax and enjoy sunday;8;8_sun;Truth;0;0;0;0;0;0;2;0;2;0;0;0;0;0;0;1;0
+86;On Sunday I went to the Thuishaven, to the festival, you know it? Here in Amsterdam. It is like there was winter circus and circus tent and electronic music festival.;9;9_sun;Lie;0;0;0;0;2;0;2;0;4;0;0;0;0;2;0;2;0
+87; Sunday I helped moving my parents, and they went from a farmer, farm so in the middle of Groningen up in the North to a city center house.;10;10_sun;Truth;0;1;0;0;0;0;2;0;3;0;1;0;0;0;0;2;0
+88; On Sunday I was here with my roommate studying all day.;11;11_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+89; On Sunday I was a bit hungover.;12;12_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+90;On Sunday I was studying in the morning and then after it we went on a boat tour with some friends. And in the evening we had, I had dinner with my family.;13;13_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+91;On Sunday I went to work, then after that in the evening I did some study and was with my family;14;14_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+92;On Sunday I a soccer match, or football, whatever you want to call it. I played at a club here just around the corner, we lost but it was a good match.;15;15_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+93;On Sunday I just went drinking with some old buddies of mine, I have not been there in quite a long time so it was worth the effort;16;16_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+94;I went to the gym in the morning and then I stayed home to study all day.;17;17_sun;Truth;0;0;1;0;0;0;1;0;2;0;0;1;0;0;0;1;0
+95;On Sunday I went to the gym in the afternoon;18;18_sun;Lie;0;0;1;0;0;0;1;0;2;0;0;1;0;0;0;1;0
+96;I woke up really really early and I went to ride my horse.;19;19_sun;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+97;I studied here in the university.;20;20_sun;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+98;Sunday I also went to Singel, for my bachelor thesis, and in the evening I went to play basketball.;21;21_sun;Lie;1;0;0;0;0;0;1;0;2;1;0;0;0;0;0;1;0
+99;On Sunday I tried to do some studying but I was a bit to hungover so.;22;22_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+100;I worked at the coffee shop.;23;23_sun;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+101;On Sunday I was so tired that I stayed home. My plan was really to stay home and even maybe to write some stuff for work. But in the end, someone at around like 17:00, pushed me to go for drinks. So I went to the De Preal, it is a nice brewery in the center. And then I had dinner at home around 21:00 and I watched a series.;24;24_sun;Lie;0;0;1;0;0;0;1;0;2;0;0;1;0;0;0;1;0
+102; Sleeping. Like for a very long time actually. Played the thorp. And reading, I read Bold by Diamandes, Peter Diamandes. It is a Greek entrepeneur. It is really interesting.;25;25_sun;Truth;2;0;0;0;1;0;0;0;3;2;0;0;0;1;0;0;0
+103;On Sunday I visited my Grandma who is living in Amsterdam. And we were having cake and coffee and it was super nice.;26;26_sun;Lie;1;0;0;0;1;0;1;0;3;1;0;0;0;1;0;1;0
+104;On Sunday, it was time to come back here. So I went to the airport, and then a bit of hangover, and then the flight was delayed and I was in the airport with my boyfriend for some time. And then I came back in this weather. Quite depressing really.;27;27_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+105;I had friends over on Sunday. I would love to tell you more what I did, but actually we did all this tourist stuff, we got to coffeeshops so all my thoughts about it are pretty blurry, so I am not really sure what we did. Just hanging out I guess.;28;28_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+106;On Sunday I was here, studying for an exam I had on wednesday. And then in the evening I went to have some dinner with friends. ;29;29_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+107;Sunday I was working. Because I have to work 56 hours a month to get studiefinanciering so sometimes even though an exam is coming up I still have to work. So I was working in the Golden Temple restaurant. ;30;30_sun;Lie;0;0;1;0;0;0;1;0;2;0;0;1;0;0;0;1;0
+108;I went to Den Haag, I visit the beach with my friends;31;31_sun;Lie;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0
+109;On Sunday, at 11:00 in the morning I had to be a referee at a hockey game. And then I had my own game, played it, and then I went to celebrate Sinterklaas with his family.;32;32_sun;Truth;0;0;1;0;0;0;1;0;2;0;0;1;0;0;0;1;0
+110; Well since I got pretty drunk on Saturday, I woke up quite hangover, then I studied for a bit. Wrote a poem for my brother and I went to my family to celebrate Sinterklaas. That is it. ;33;33_sun;Truth;1;0;0;0;0;0;1;0;2;1;0;0;0;0;0;1;0
+111;In the morning we went to a zoo. It is in Munster as well. It is like with, where you can go inside even if it is bad weather, so that was good luck. And in the evening we really did nothing, like just layed in bed. ;34;34_sun;Lie;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0
+112;Sunday I also stayed at home but I did laundry and cleaning kitchen and this kind of stuff. And also did some sport, I went to the gym, and no running. ;35;35_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+113;My Sunday I just layed in bed and got very stoned. I did absolutely fuck all.;36;36_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+114;I went for a bike ride first, and then I found a place to go for sunday dinner. There is actually an Irish pub around here that does it, which is amazing. ;37;37_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+115;I came her to study because I am writing my thesis. So I came to just do stuff about my thesis.  ;38;38_sun;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+116;Yea on Sunday I'm going to Antwerp because I have been living in the Netherlands for about two years now and I've never been to Belgium so I was like, I really need to go to Belgium at some point, so yea. ;39;39_sun;Lie;0;0;0;0;4;0;2;0;6;0;0;0;0;3;0;2;0
+117;On Sunday I will be studying because I have an exam in two weeks time, so I should be studying on Sunday;40;40_sun;Lie;0;0;0;0;0;0;3;0;3;0;0;0;0;0;0;2;0
+118;On Sunday I need to of course start studying a bit and stuff because I have an exam due, a paper due, on Monday.;41;41_sun;Truth;0;0;0;0;0;0;2;0;2;0;0;0;0;0;0;2;0
+119;Sunday I'm gonna study. ;42;42_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+120;Sunday I'm going to have dinner with my boyfriend and my parents. ;43;43_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+121;Sunday first I'm going to the movies, and then I'm going to a party of a friend. ;44;44_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+122;Studying, a lot. ;45;45_sun;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+123;Yes, (unintelligible) Sunday I'm just going back to Spain;46;46_sun;Truth;0;0;0;0;1;0;1;0;2;0;0;0;0;1;0;1;0
+124;On Sunday it's my friends 21st birthday, so we're probably gonna do something, but also there we aren't too sure what the plan is yet.;47;47_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+125;I am going to have dinner with my brother in law, but actually I am going to cancel that because I have to study as well, so that is what I planned to do, change of plans.;48;48_sun;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+126;Well although I would have loved to show him even more of Amsterdam I actually have to study because I have exams the following week, so probably study.;49;49_sun;Truth;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0
+127;Sunday I hope I'll be done with the study on Saturday, so probably I will be going to iceskating near by the Rijkmuseum, I don't know the prenunciation, and in the evening we will probably go see the Lights Festival. ;50;50_sun;Lie;1;0;0;0;0;0;2;0;3;1;0;0;0;0;0;2;0
+128;On Sunday I going to play soccer, because I play in a soccer team and it is well like our weekend job let me say.;51;51_sun;Lie;0;0;0;0;0;0;2;0;2;0;0;0;0;0;0;2;0
+129;On Sunday it is my gym day, so I do my weight training, and then I do squats, and semi-squats, and hip-thrusts badsically, and yea. ;52;52_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+130;My friend is visiting me from Norway, so we will go out shopping.;53;53_sun;Truth;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0
+131; I should study as well.;54;54_sun;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+132;I usually have to work on Sunday, so that's what I'll be doing. I'm going to sleep in I think, and then go to work.;55;55_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+133;I have a soccer match in the morning, so uh... and for the rest, I think that's it.;56;56_sun;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+134;I actually have a family get together. We are going to Limburg in the North of the Netherlands, because one of my grandpa is turning 80, so that's quite a long time to be alive. So we are celebrating that close to Maastricht.;57;57_sun;Lie;0;1;0;0;2;0;2;0;5;0;1;0;0;2;0;2;0
+135;I am reading, and then probably working out.;58;58_sun;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+136;Next Sunday, I will go study I think because exam week will come up and the week after that and I've got two exams so I'll need to prepare for them;59;59_sun;Lie;0;0;0;0;0;0;3;0;3;0;0;0;0;0;0;3;0
+137;Next Sunday I am probably going to study. My exams and yea, I think the whole day will be planned to study.;60;60_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+138;Next Sunday I'm going to do shopping with my girlfriend, and that's it.;61;61_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+139;I am gonna go with my mom to the vet because I have to take my cat to the vet.;62;62_sun;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+140;I am going to London.;63;63_sun;Truth;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0
+141;On Sunday I think I will just clean the house because then I've just gotten home.;64;64_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+142;On Sunday I am going to work. I have to prepare a talk and then I will also ship some stuff home.;65;65_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+143;Yep so um I have an exam coming up so I'm probably just gonna be studying most of the time. Gonna go into the study area downstairs and spend the entire day there there hopefully.;66;66_sun;Truth;1;0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0
+144;Probably gonna be at home studying. Maybe get some take-out. ;67;67_sun;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+145;So next Sunday a friend of mine from Rotterdam is coming over and we're gonna go shopping in the center of Amsterdam, have coffee and then we'll have dinner here at my place.;68;68_sun;Lie;0;0;0;0;2;0;1;0;3;0;0;0;0;2;0;1;0
+146;Something completely different: I will have just a regular day at home and I would like to visit an aunt who is sick in the hospital ;69;69_sun;Truth;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+147;I am gonna go snow skiing in Capetown because it is winter there.;70;70_sun;Lie;0;0;0;0;1;0;0;0;1;0;0;0;0;1;0;0;0
+148;On Sunday I will go to my parents and talk to them about their inheretence. They live in Breda. ;71;71_sun;Truth;1;0;0;0;0;0;1;0;2;1;0;0;0;0;0;1;0
+149;On Sunday we will have breakfast with family and we will do some christmas shoppings.;72;72_sun;Truth;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+150;Sunday I will go to a Christmas market with my friends in Germany.;73;73_sun;Truth;0;0;0;0;1;0;2;0;3;0;0;0;0;1;0;2;0
+151;On Sunday I am going to have a nice walk with your mum and the dog in, what do you call that? The surroundings here.;74;74_sun;Lie;0;0;0;0;0;0;1;0;1;0;0;0;0;0;0;1;0
+152;I'll start walking the dog with my friend who lives here in the village, and we will walk through the area that is called the Bernisse. And we have to walk for an hour and a half because a lot bridges are being taken away so we cannot do our regular circle. ;75;75_sun;Truth;1;0;1;0;0;0;0;0;2;1;0;1;0;0;0;0;0
+153;I am going to see a movie.;76;76_sun;Lie;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0
+154;Don't tell my husband, but Liam Neeson is in town, and we have been having an affair for years. So we are going to meet at the Amstel hotel where we have the Bridal sweet. And we will just do our own thing. ;77;77_sun;Lie;2;0;0;0;0;0;1;0;3;2;0;0;0;0;0;1;0
