@@ -5,20 +5,22 @@ date: "16-12-2017"
 output:
   pdf_document: default
   html_document: default
+urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 # set WD
 ```
 
 
 # Available Data
 
-+ File 1 - LieDetection_Data.csv
++ File 1 - [LieDetection_Data.csv](https://github.com/SHogenboom/OnlineAppendix--LieDetection2017/blob/master/LieDetection_Data.csv)
     + Contains demographics, veracity judgement, exclusion criteria, transcriptions,
   confidence of deceit, frequency of lie.
-+ File 2 - LieDetection_NER_processed.csv
++ File 2 - [LieDetection_NER_processed.csv](https://github.com/SHogenboom/OnlineAppendix--LieDetection2017/blob/master/LieDetection_NER_processed.csv)
     + Transcriptions in long format -> allows for Named Entity Recognition 
   (NER;https://spacy.io)
     + Unique and Non-Unique Frequency counts of the NERs...
@@ -317,8 +319,8 @@ The amount of recognized named entities for deceptive statements about past and 
 
 The datafiles including newly created columns (e.g., total amount of NEs in truthful descriptions) are available as:
 
-+ All collected data - LieDetection_CombinedData_All.csv
-+ Data after excluding of participants - LieDetection_Combined_Excluded.csv
++ All collected data - [LieDetection_CombinedData_All.csv](https://github.com/SHogenboom/OnlineAppendix--LieDetection2017/blob/master/LieDetection_CombinedData_All.csv)
++ Data after excluding of participants - [LieDetection_Combined_Excluded.csv](https://github.com/SHogenboom/OnlineAppendix--LieDetection2017/blob/master/LieDetection_Combined_Excluded.csv)
 
 ```{R Save Data, echo = FALSE}
 write.csv(Data_All, "LieDetection_CombinedData_All.csv")
