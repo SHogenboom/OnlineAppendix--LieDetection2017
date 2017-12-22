@@ -11,3 +11,4 @@ Supporting documents for the Research Project as was conducted for the 2017 cour
 
 3. [JASP output](https://github.com/SHogenboom/OnlineAppendix--LieDetection2017/blob/master/JASP_Combined_Excluded.jasp) of analyses run on data after exclusion
 
+4. [Interview Protocol](https://github.com/SHogenboom/OnlineAppendix--LieDetection2017/blob/master/InterviewProtocol.docx)
