@@ -76,7 +76,16 @@ knitr::opts_chunk$set(echo = TRUE)
       
 # Calculate Total NERs Divided for Truths and Lies
   # create new columns to store output
+    Data_All$Person_Truth <- NaN
+    Data_All$Time_Truth <- NaN
+    Data_All$GPE_Truth <- NaN
+    Data_All$Date_Truth <- NaN
     Data_All$Total_Truth <- NaN
+  
+    Data_All$Person_Lie <- NaN
+    Data_All$Time_Lie <- NaN
+    Data_All$GPE_Lie <- NaN
+    Data_All$Date_Lie <- NaN
     Data_All$Total_Lie <- NaN
       
   for (i in 1:nrow(Data_All)){
@@ -84,14 +93,34 @@ knitr::opts_chunk$set(echo = TRUE)
           # Truth-First
           # Saturday == Truth
           # Sunday == Lie
+            Data_All[i, "Person_Truth"] <- Data_All[i, "Sat_Person_NU"]
+            Data_All[i, "Time_Truth"] <- Data_All[i, "Sat_Time_NU"]
+            Data_All[i, "GPE_Truth"] <- Data_All[i, "Sat_GPE_NU"]
+            Data_All[i, "Date_Truth"] <- Data_All[i, "Sat_Date_NU"]
             Data_All[i, "Total_Truth"] <- Data_All[i, "Total_Sat"]
+      
+            Data_All[i, "Person_Lie"] <- Data_All[i, "Sun_Person_NU"]
+            Data_All[i, "Time_Lie"] <- Data_All[i, "Sun_Time_NU"]
+            Data_All[i, "GPE_Lie"] <- Data_All[i, "Sun_GPE_NU"]
+            Data_All[i, "Date_Lie"] <- Data_All[i, "Sun_Date_NU"]
             Data_All[i, "Total_Lie"] <- Data_All[i, "Total_Sun"]
     } else {
           # Lie-First
           # Saturday == Lie
           # Sunday == Truth
+      
+            Data_All[i, "Person_Truth"] <- Data_All[i, "Sun_Person_NU"]
+            Data_All[i, "Time_Truth"] <- Data_All[i, "Sun_Time_NU"]
+            Data_All[i, "GPE_Truth"] <- Data_All[i, "Sun_GPE_NU"]
+            Data_All[i, "Date_Truth"] <- Data_All[i, "Sun_Date_NU"]
             Data_All[i, "Total_Truth"] <- Data_All[i, "Total_Sun"]
+      
+            Data_All[i, "Person_Lie"] <- Data_All[i, "Sat_Person_NU"]
+            Data_All[i, "Time_Lie"] <- Data_All[i, "Sat_Time_NU"]
+            Data_All[i, "GPE_Lie"] <- Data_All[i, "Sat_GPE_NU"]
+            Data_All[i, "Date_Lie"] <- Data_All[i, "Sat_Date_NU"]
             Data_All[i, "Total_Lie"] <- Data_All[i, "Total_Sat"]
+      
       } # END IF
     } # END LOOP
 
@@ -286,31 +315,17 @@ The amount of recognized named entities for deceptive statements about past and 
 # SAVE VIOLIN PLOTS
 
 # png("violinplots_deceptive.png")
-#   par(mfrow = c(1,2))
-# 
-#   pirateplot(Data_All$Total_Lie ~ Data_All$Time, Data_All, pal = c("grey", "black"),
-#              xlab = "Time", ylab = "Amount of Named Entities Recognized", 
-#               main = "Deceptive descriptions of future and past weekend activities",
-#               family = "Times New Roman", gl.lwd = 0, inf.method = "se")
-# 
 #   pirateplot(Data_Excluded$Total_Lie ~ Data_Excluded$Time, Data_Excluded, pal = c("grey", "black"),
 #              xlab = "Time", ylab = "Amount of Named Entities Recognized",
-#              main = "Truthful descriptions of future and past weekend activities",
+#              main = "Deceptive Statements of Future and Past Activities",
 #              family = "Times New Roman", gl.lwd = 0, inf.method = "se")
 # 
 # dev.off()
 # 
 # png("violingplots_truthful.png")
-#   par(mfrow = c(1,2))
-# 
-#   pirateplot(Data_All$Total_Truth ~ Data_All$Time, Data_All, pal = c("grey", "black"),
+#  pirateplot(Data_Excluded$Total_Truth ~ Data_Excluded$Time, Data_Excluded, pal = c("grey", "black"),
 #              xlab = "Time", ylab = "Amount of Named Entities Recognized",
-#              main = "Truthful Descriptions - Pre-Exclusion",
-#              family = "Times New Roman", gl.lwd = 0, inf.method = "se")
-# 
-#   pirateplot(Data_Excluded$Total_Truth ~ Data_Excluded$Time, Data_Excluded, pal = c("grey", "black"),
-#              xlab = "Time", ylab = "Amount of Named Entities Recognized",
-#              main = "Truthful Descriptions - Post-Exclusion",
+#              main = "Truthful Statements of Future and Past Activities",
 #              family = "Times New Roman", gl.lwd = 0, inf.method = "se")
 # dev.off()
 ```
@@ -327,4 +342,78 @@ write.csv(Data_All, "LieDetection_CombinedData_All.csv")
 write.csv(Data_Excluded, "LieDetection_Combined_Excluded.csv")
 ```
 
+# Network Analysis
 
+## Truthful Statements
+
+```{R echo = FALSE}
+require("psych")
+require("qgraph")
+
+nNames <- c("Person", "Time", "GPE", "Date")
+
+
+pcor_truth_past <- partial.r(Data_Excluded[which(Data_Excluded[,"Time"] == "Past"), 
+                                           c("Person_Truth", "Time_Truth", "GPE_Truth", "Date_Truth")])
+
+pcor_truth_future <- partial.r(Data_Excluded[which(Data_Excluded[,"Time"] == "Future"), 
+                                           c("Person_Truth", "Time_Truth", "GPE_Truth", "Date_Truth")])
+
+
+par(mfrow = c(1,2))
+
+truthful_network_past <- qgraph(pcor_truth_past, theme = "gray", layout = "circle", negDashed = TRUE,
+       edge.labels = TRUE, edge.label.cex = 2, shape = "square", legend = FALSE, labels = nNames)
+
+truthful_network_future <- qgraph(pcor_truth_future, theme = "gray", layout = truthful_network_past[["layout"]], 
+                                  negDashed = TRUE, labels = nNames,
+                                  edge.labels = TRUE, edge.label.cex = 2, shape = "square")
+
+```
+
+## Deceptive Statements
+
+```{R echo=FALSE}
+
+pcor_lie_past <- partial.r(Data_Excluded[which(Data_Excluded[,"Time"] == "Past")
+                                         , c("Person_Lie", "Time_Lie", "GPE_Lie", "Date_Lie")])
+
+pcor_lie_future <- partial.r(Data_Excluded[which(Data_Excluded[,"Time"] == "Future")
+                                         , c("Person_Lie", "Time_Lie", "GPE_Lie", "Date_Lie")])
+
+par(mfrow = c(1,2))
+
+deceptive_network_past <- qgraph(pcor_lie_past, theme = "gray", layout = truthful_network_past[["layout"]], 
+                            labels = nNames, negDashed = TRUE, legend = FALSE,
+                            edge.labels = TRUE, edge.label.cex = 2, shape = "square")
+
+deceptive_network_future <- qgraph(pcor_lie_future, theme = "gray", layout = truthful_network_past[["layout"]], 
+                            labels = nNames, negDashed = TRUE,
+                            edge.labels = TRUE, edge.label.cex = 2, shape = "square")
+
+```
+
+
+```{R CreateNetworkOutput, include = FALSE}
+#  png("network_truths.png")
+#    par(mfrow = c(1,2))
+# 
+#  truthful_network_past <- qgraph(pcor_truth_past, theme = "gray", layout = "circle", labels = nNames, negDashed = TRUE,
+#         edge.labels = TRUE, edge.label.cex = 2, shape = "square", legend = FALSE)
+# 
+#  truthful_network_future <- qgraph(pcor_truth_future, theme = "gray", layout = truthful_network_past[["layout"]], labels = nNames, negDashed = TRUE,
+#         edge.labels = TRUE, edge.label.cex = 2, shape = "square")
+#  dev.off()
+# 
+# png("network_lies.png")
+#    par(mfrow = c(1,2))
+# 
+#  deceptive_network_past <- qgraph(pcor_lie_past, theme = "gray", layout = truthful_network_past[["layout"]],
+#                             labels = nNames, negDashed = TRUE, legend = FALSE,
+#                              edge.labels = TRUE, edge.label.cex = 2, shape = "square")
+# 
+#  deceptive_network_future <- qgraph(pcor_lie_future, theme = "gray", layout = truthful_network_past[["layout"]],
+#                              labels = nNames, negDashed = TRUE,
+#                              edge.labels = TRUE, edge.label.cex = 2, shape = "square")
+# dev.off()
+```
